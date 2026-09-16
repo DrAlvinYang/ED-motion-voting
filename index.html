@@ -2,13 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  <title>Motion Voting</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ED Tools</title>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; max-width: 640px;
+           margin: 3rem auto; padding: 0 1.25rem; line-height: 1.5; color: #1a1a1a; }
+    h1 { margin-bottom: .25rem; }
+    p.sub { color: #666; margin-top: 0; }
+    ul { list-style: none; padding: 0; }
+    li { margin: .75rem 0; }
+    a.tool { display: block; padding: 1rem 1.25rem; border: 1px solid #ddd;
+             border-radius: 10px; text-decoration: none; color: inherit; }
+    a.tool:hover { border-color: #999; background: #fafafa; }
+    a.tool strong { display: block; font-size: 1.1rem; }
+    a.tool span { color: #666; font-size: .9rem; }
+  </style>
 </head>
 <body>
-  <div class="wrap" id="app"></div>
-  <div id="toast" class="toast hide"></div>
-  <script type="module" src="js/vote.js"></script>
+  <h1>ED Tools</h1>
+  <p class="sub">Small internal tools for the Emergency Department.</p>
+  <ul>
+    <li>
+      <a class="tool" href="tools/motion-voting/index.html">
+        <strong>Motion Voting</strong>
+        <span>Live weighted voting for meeting motions.</span>
+      </a>
+    </li>
+    <!-- Add new tools here as they ship, e.g.:
+    <li><a class="tool" href="tools/interviews/index.html">
+      <strong>Interview Scheduling</strong><span>...</span></a></li>
+    -->
+  </ul>
 </body>
 </html>

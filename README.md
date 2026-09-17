@@ -10,6 +10,7 @@ Firestore for any live data.
 | Tool | What it does | Folder |
 |------|--------------|--------|
 | **Motion Voting** | Live weighted voting for meeting motions | [`tools/motion-voting/`](tools/motion-voting/) |
+| **Physician Hiring** | Screen applicants, collect availability, auto-build interview panels, score & rank | [`tools/interviews/`](tools/interviews/) |
 
 _New tools get added here as they ship._
 

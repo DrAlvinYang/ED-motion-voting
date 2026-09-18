@@ -1,6 +1,5 @@
 {
   "permissions": {
-    "defaultMode": "acceptEdits",
     "allow": [
       "Skill(update-config)",
       "Skill(update-config:*)",
@@ -9,14 +8,20 @@
       "Edit",
       "Write",
       "WebFetch",
-      "WebSearch"
-    ]
+      "WebSearch",
+      "Read(//home/vscode/.claude/projects/**)",
+      "Skill(claude-api)",
+      "Skill(claude-api:*)"
+    ],
+    "defaultMode": "bypassPermissions"
   },
   "sandbox": {
     "enabled": false,
     "autoAllowBashIfSandboxed": true,
     "network": {
-      "allowedDomains": ["*"]
+      "allowedDomains": [
+        "*"
+      ]
     }
   }
 }

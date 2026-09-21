@@ -15,7 +15,22 @@ HTML/CSS/JS (ES modules), with Firebase/Firestore for any live data.
   firestore.rules      Firestore rules for this tool's Firebase project
   CLAUDE.md            Tool-specific context and gotchas
 /.claude/              Shared Claude Code settings & permissions
+/_redirect-old-repo/   Not a tool — source for the legacy-URL redirect repo
 ```
+
+## Naming
+
+- **Repo: `mgh-ed-tools`** (renamed from `ED-motion-voting` once it outgrew one
+  tool). Live at `https://dralvinyang.github.io/mgh-ed-tools/tools/<tool>/`.
+- **Tool folders are lowercase-kebab-case** (`motion-voting`, `interviews`) and
+  become the public URL segment, so treat a folder name as a published API:
+  renaming one breaks every shared link and QR code for that tool.
+- **Nothing in the repo hardcodes the repo name** except docs and the landing
+  page. Tools use relative paths only, so the repo could be renamed again
+  without touching tool code.
+- **Firebase project ids are immutable and deliberately per-tool**
+  (`ed-motion-voting-99b96`, `mgh-ed-hiring`). They do *not* track the repo
+  name — don't "fix" them to match.
 
 ## How to work here
 

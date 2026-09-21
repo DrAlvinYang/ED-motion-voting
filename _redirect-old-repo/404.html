@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Redirecting — ED Tools</title>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; max-width: 34rem;
+           margin: 4rem auto; padding: 0 1.25rem; line-height: 1.5; color: #1a1a1a; }
+    h1 { font-size: 1.25rem; margin-bottom: .5rem; }
+    p { color: #555; }
+    a { color: #0b57d0; word-break: break-all; }
+  </style>
+</head>
+<body>
+  <h1>This link has moved</h1>
+  <p>The ED tools moved to a new address. Taking you there now…</p>
+  <p>If nothing happens, use this link:<br /><a id="target" href="https://dralvinyang.github.io/mgh-ed-tools/">https://dralvinyang.github.io/mgh-ed-tools/</a></p>
+
+  <script>
+    // Old project-Pages URLs looked like:
+    //   https://dralvinyang.github.io/ED-motion-voting/<rest>
+    // Rewrite <rest> onto the new repo path, preserving query + hash. Pages
+    // serves this file for ANY unmatched path under the old repo, so a deep
+    // link such as /ED-motion-voting/tools/motion-voting/ lands here too.
+    (function () {
+      var OLD_BASE = "/ED-motion-voting";
+      var NEW_BASE = "/mgh-ed-tools";
+
+      var path = window.location.pathname;
+      var rest = path.indexOf(OLD_BASE) === 0 ? path.slice(OLD_BASE.length) : "/";
+      if (rest.charAt(0) !== "/") rest = "/" + rest;
+
+      var target = window.location.origin + NEW_BASE + rest +
+                   window.location.search + window.location.hash;
+
+      document.getElementById("target").href = target;
+      document.getElementById("target").textContent = target;
+      window.location.replace(target);
+    })();
+  </script>
+</body>
+</html>

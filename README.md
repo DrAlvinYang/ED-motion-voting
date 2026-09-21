@@ -37,7 +37,23 @@ side by side on `main` rather than on per-tool branches.
 
 ## Deployment
 
-GitHub Pages serves the whole repo from `main` / root. Each tool is live at
-`https://<user>.github.io/<repo>/tools/<tool>/`. The root URL shows the landing
-page. Per-tool setup (Firebase, passcodes, roster) lives in each tool's own
+GitHub Pages serves the whole repo from `main` / root, so every tool ships
+together. The live URLs:
+
+| Page | URL |
+|------|-----|
+| Landing page | https://dralvinyang.github.io/mgh-ed-tools/ |
+| Motion Voting | https://dralvinyang.github.io/mgh-ed-tools/tools/motion-voting/ |
+| Physician Hiring | https://dralvinyang.github.io/mgh-ed-tools/tools/interviews/ |
+
+New tools follow the same shape:
+`https://dralvinyang.github.io/mgh-ed-tools/tools/<tool>/`.
+
+Per-tool setup (Firebase, passcodes, roster) lives in each tool's own
 `README.md` — e.g. [`tools/motion-voting/README.md`](tools/motion-voting/README.md).
+
+### Old repo name
+
+This repo was renamed from `ED-motion-voting` once it grew past a single tool.
+Links to the old `…github.io/ED-motion-voting/…` URLs are kept alive by a
+separate redirect-only repo — see [`_redirect-old-repo/`](_redirect-old-repo/).

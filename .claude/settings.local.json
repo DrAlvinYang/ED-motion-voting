@@ -1,17 +1,33 @@
 {
   "permissions": {
     "allow": [
-      "Skill(update-config)",
-      "Skill(update-config:*)",
       "Bash",
       "Read",
       "Edit",
       "Write",
       "WebFetch",
       "WebSearch",
-      "Read(//home/vscode/.claude/projects/**)",
+      "Skill",
+      "Read(//usr/local/bin/**)",
+      "Bash(apt list *)",
+      "Bash(git checkout *)",
+      "Bash(git add *)",
+      "Bash(git merge *)",
+      "Bash(git branch *)",
+      "Bash(git remote *)",
+      "Bash(git push *)",
       "Skill(claude-api)",
-      "Skill(claude-api:*)"
+      "Skill(claude-api:*)",
+      "Bash(python3 -)",
+      "Bash(python3 -c ' *)",
+      "Bash(git commit -q -m 'interviews: fix emulator config — rules path was outside project dir *)",
+      "Bash(timeout 30 git ls-remote --symref https://github.com/DrAlvinYang/ED-motion-voting.git HEAD)",
+      "Bash(echo \"--- exit:$? ---\")",
+      "Bash(timeout 30 git ls-remote --symref origin HEAD)",
+      "Bash(timeout 30 curl -s https://api.github.com/repos/DrAlvinYang/ED-motion-voting)",
+      "Bash(timeout 30 curl -s https://api.github.com/repos/DrAlvinYang/mgh-ed-tools)",
+      "Bash(timeout 30 git ls-remote origin HEAD)",
+      "Bash(git commit -q -m ' *)"
     ],
     "defaultMode": "bypassPermissions"
   },

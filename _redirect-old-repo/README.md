@@ -5,8 +5,12 @@ repo that keeps the old published links working.
 
 ## Why
 
-This repo was renamed `ED-motion-voting` → `mgh-ed-tools`, which changes the
-GitHub Pages path for every tool:
+**Nothing here is live yet — the rename has not happened.** The GitHub repo is
+still `ED-motion-voting`, so all the current published links already work and
+this redirect is not needed *until* the rename. Set it up at that point.
+
+Renaming `ED-motion-voting` → `mgh-ed-tools` changes the GitHub Pages path for
+every tool:
 
 ```
 old:  https://dralvinyang.github.io/ED-motion-voting/tools/motion-voting/

@@ -42,18 +42,33 @@ together. The live URLs:
 
 | Page | URL |
 |------|-----|
-| Landing page | https://dralvinyang.github.io/mgh-ed-tools/ |
-| Motion Voting | https://dralvinyang.github.io/mgh-ed-tools/tools/motion-voting/ |
-| Physician Hiring | https://dralvinyang.github.io/mgh-ed-tools/tools/interviews/ |
+| Landing page | https://dralvinyang.github.io/ED-motion-voting/ |
+| Motion Voting | https://dralvinyang.github.io/ED-motion-voting/tools/motion-voting/ |
+| Physician Hiring | https://dralvinyang.github.io/ED-motion-voting/tools/interviews/ |
 
 New tools follow the same shape:
-`https://dralvinyang.github.io/mgh-ed-tools/tools/<tool>/`.
+`https://dralvinyang.github.io/ED-motion-voting/tools/<tool>/`.
 
 Per-tool setup (Firebase, passcodes, roster) lives in each tool's own
 `README.md` — e.g. [`tools/motion-voting/README.md`](tools/motion-voting/README.md).
 
-### Old repo name
+### The repo name — rename still pending
 
-This repo was renamed from `ED-motion-voting` once it grew past a single tool.
-Links to the old `…github.io/ED-motion-voting/…` URLs are kept alive by a
-separate redirect-only repo — see [`_redirect-old-repo/`](_redirect-old-repo/).
+The GitHub repo is still called **`ED-motion-voting`**, from when it held only
+that one tool, so that name is in every live URL above. The working directory
+and these docs use `mgh-ed-tools`, which is the name it is *going* to get.
+
+**Don't rename it casually.** GitHub forwards the repository URL and git remotes
+after a rename, but **not the Pages site** — so the moment the repo is renamed,
+every published link 404s. Two are already out with the ED group:
+
+- the interviews mock link emailed to Kyle and Amanda (Sept 16)
+- `tools/motion-voting/voter-qr.png`, the meeting QR code, which encodes
+  `https://dralvinyang.github.io/ED-motion-voting/`
+
+[`_redirect-old-repo/`](_redirect-old-repo/) is the prepared fix: a separate
+redirect-only repo that takes over the old name and forwards every old path.
+Follow its README **immediately** after renaming — old links are dead in the gap
+between the two steps.
+
+Best done when nothing is mid-flight: after the Oct 2026 hiring round closes.

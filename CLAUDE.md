@@ -20,8 +20,12 @@ HTML/CSS/JS (ES modules), with Firebase/Firestore for any live data.
 
 ## Naming
 
-- **Repo: `mgh-ed-tools`** (renamed from `ED-motion-voting` once it outgrew one
-  tool). Live at `https://dralvinyang.github.io/mgh-ed-tools/tools/<tool>/`.
+- **Repo: `mgh-ed-tools` locally, but still `ED-motion-voting` on GitHub** — the
+  rename is planned, not done. Live URLs are therefore
+  `https://dralvinyang.github.io/ED-motion-voting/tools/<tool>/`. Use that form
+  in anything published or emailed; don't "correct" it to `mgh-ed-tools`, which
+  404s. Renaming breaks every shared link (Pages is not redirected) — see
+  README → "The repo name" before touching it.
 - **Tool folders are lowercase-kebab-case** (`motion-voting`, `interviews`) and
   become the public URL segment, so treat a folder name as a published API:
   renaming one breaks every shared link and QR code for that tool.

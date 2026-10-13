@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>This link has moved — MGH ED Tools</title>
+  <style>
+    body { font-family: -apple-system, system-ui, sans-serif; max-width: 34rem;
+           margin: 4rem auto; padding: 0 1.25rem; line-height: 1.5; color: #1d1d1f; background: #fff; }
+    h1 { font-size: 1.25rem; margin-bottom: .5rem; }
+    p { color: #555; }
+    a { color: #0071e3; word-break: break-all; }
+  </style>
+</head>
+<body>
+  <h1>This link has moved</h1>
+  <p>The MGH ED tools now live at a new address. Taking you there now…</p>
+  <p>If nothing happens, use this link:<br />
+    <a id="target" href="https://michaelgarronhospital-ed.github.io/">https://michaelgarronhospital-ed.github.io/</a></p>
+
+  <script>
+    // GitHub Pages serves this file for every path that no longer exists here,
+    // so old deep links (QR codes, emailed links) all land on this page.
+    // Old: https://dralvinyang.github.io/ED-motion-voting/tools/<tool>/<rest>
+    // New: https://michaelgarronhospital-ed.github.io/<new repo>/<rest>
+    // Query string and #hash are kept.
+    (function () {
+      var NEW_ORIGIN = "https://michaelgarronhospital-ed.github.io";
+      var MOVES = {
+        "/ED-motion-voting/tools/motion-voting": "/mgh-ed-motion-voting",
+        "/ED-motion-voting/tools/interviews": "/mgh-ed-hiring"
+      };
+      var path = window.location.pathname;
+      var target = NEW_ORIGIN + "/"; // anything unrecognised goes to the dashboard
+      for (var oldBase in MOVES) {
+        if (path === oldBase || path.indexOf(oldBase + "/") === 0) {
+          var rest = path.slice(oldBase.length) || "/";
+          target = NEW_ORIGIN + MOVES[oldBase] + rest;
+          break;
+        }
+      }
+      target += window.location.search + window.location.hash;
+      var a = document.getElementById("target");
+      a.href = target;
+      a.textContent = target;
+      window.location.replace(target);
+    })();
+  </script>
+</body>
+</html>
